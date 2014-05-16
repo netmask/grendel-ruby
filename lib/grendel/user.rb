@@ -1,7 +1,7 @@
 module Grendel
   class User
     attr_accessor :id, :password, :uri
-    attr_reader :client, :modified_at, :created_at, :keys
+    attr_reader :client, :modified_at, :created_at, :keys, :uuid
 
     # create a new Grendel::User object
     # params:
