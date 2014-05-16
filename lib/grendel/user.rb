@@ -19,6 +19,7 @@ module Grendel
       @modified_at = DateTime.parse(params[:"modified-at"]) if params[:"modified-at"]
       @created_at = DateTime.parse(params[:"created-at"]) if params[:"created-at"]
       @keys = params[:keys]
+      @uuid = params[:uuid]
     end
 
     # return user's creds in the form required by HTTParty
