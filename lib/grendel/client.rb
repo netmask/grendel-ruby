@@ -24,6 +24,7 @@ module Grendel
     end
 
     def put(uri, data = {}, options = {})
+      puts @base_uri + uri
       process_response HTTParty.put(@base_uri + uri, process_options(options, data))
     end
 

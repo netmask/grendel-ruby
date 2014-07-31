@@ -1,5 +1,6 @@
 module Grendel
   class DocumentManager
+    attr_accessor :auth_headers
 
     def initialize(user)
       @user = user
@@ -9,6 +10,7 @@ module Grendel
     # list all documents
     def list
       response = @user.get(@base_uri)
+      @auth_headers = response.headers
       response["documents"].map {|d| Document.new(@user, d) }
     end
 
